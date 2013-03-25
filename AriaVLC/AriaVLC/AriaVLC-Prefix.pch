@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'AriaVLC' target in the 'AriaVLC' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+static const int LOG_LEVEL_ERROR =      1;
+static const int LOG_LEVEL_WARNING =    2;
+static const int LOG_LEVEL_INFO =       3;
+static const int LOG_LEVEL_VERBOSE =    4;
+
+
+// Imposta i livelli di logging per Cocoa Lumberjack
+// Mostra tutti i log in fase di DEBUG altrimenti solo Warning ed ERROR
+#ifdef DEBUG
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const int ddLogLevel = LOG_LEVEL_WARNING;
+#endif
