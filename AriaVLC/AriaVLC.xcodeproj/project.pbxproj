@@ -32,6 +32,7 @@
 		C3741D6D17005C8F00C15E56 /* ariaVlcSymbol.png in Resources */ = {isa = PBXBuildFile; fileRef = C3741D6B17005C8F00C15E56 /* ariaVlcSymbol.png */; };
 		C3741D751700628400C15E56 /* RM_MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3741D731700628400C15E56 /* RM_MainView.m */; };
 		C3741D7B17006AAE00C15E56 /* RM_MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3741D7A17006AAE00C15E56 /* RM_MainView.xib */; };
+		C398243E1701B52C00AFF57D /* RM_AriaSymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = C398243D1701B52C00AFF57D /* RM_AriaSymbolView.m */; };
 		C3CCD59D1701085500134B41 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CCD59C1701085500134B41 /* About.png */; };
 		C3CCD5A817010F3100134B41 /* RM_PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CCD5A717010F3100134B41 /* RM_PreferencesController.xib */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,8 @@
 		C3741D731700628400C15E56 /* RM_MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_MainView.m; path = Controllers/RM_MainView.m; sourceTree = "<group>"; };
 		C3741D7A17006AAE00C15E56 /* RM_MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RM_MainView.xib; path = Controllers/RM_MainView.xib; sourceTree = "<group>"; };
 		C3741D7C17006BAC00C15E56 /* RM_VlcActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RM_VlcActions.h; path = Protocols/RM_VlcActions.h; sourceTree = "<group>"; };
+		C398243C1701B52C00AFF57D /* RM_AriaSymbolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RM_AriaSymbolView.h; path = Views/RM_AriaSymbolView.h; sourceTree = "<group>"; };
+		C398243D1701B52C00AFF57D /* RM_AriaSymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_AriaSymbolView.m; path = Views/RM_AriaSymbolView.m; sourceTree = "<group>"; };
 		C3CCD59C1701085500134B41 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		C3CCD5A717010F3100134B41 /* RM_PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RM_PreferencesController.xib; path = Controllers/RM_PreferencesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +195,8 @@
 			children = (
 				C30AEE2016FDF38B0026AA86 /* RM_DragHereView.h */,
 				C30AEE2116FDF38B0026AA86 /* RM_DragHereView.m */,
+				C398243C1701B52C00AFF57D /* RM_AriaSymbolView.h */,
+				C398243D1701B52C00AFF57D /* RM_AriaSymbolView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 				C36D409F1700B63400AFA205 /* RM_ApplicationController.m in Sources */,
 				C36D40A31700B9FF00AFA205 /* RM_PreferencesController.m in Sources */,
 				C329BD2B1700D54700A23AF2 /* RM_AudioDelayTextField.m in Sources */,
+				C398243E1701B52C00AFF57D /* RM_AriaSymbolView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

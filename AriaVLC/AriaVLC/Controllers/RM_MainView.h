@@ -9,10 +9,14 @@
 #import <Cocoa/Cocoa.h>
 #import "DDLog.h"
 
-@interface RM_MainView : NSViewController
+@class RM_AriaSymbolView;
+
+@interface RM_MainView : NSViewController {
+    RM_AriaSymbolView *ariaSymbol;
+}
 
 @property (assign) IBOutlet NSImageView *dottedLineBorder;
-@property (assign) IBOutlet NSImageView *ariaSymbol;
+
 
 
 

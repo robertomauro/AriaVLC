@@ -7,6 +7,7 @@
 //
 
 #import "RM_MainView.h"
+#import "RM_AriaSymbolView.h"
 
 #define OUT_ALPHA           0.2f
 #define IN_ALPHA            1.0f
@@ -17,14 +18,14 @@
 @interface RM_MainView (Private)
 
 - (void)registerNotification;
-- (NSPoint)getOriginWith:(NSSize)frameSize For:(NSView *)parentView;
+- (NSPoint)getCenterWith:(NSSize)frameSize For:(NSRect)parentViewBounds;
 - (void)expandDragBox:(NSNotification *)notification;
 - (void)restoreDragBox:(NSNotification *)notification;
 
 @end
 
 @implementation RM_MainView
-@synthesize dottedLineBorder, ariaSymbol;
+@synthesize dottedLineBorder;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,8 +43,20 @@
 {
     [super loadView];
     
-    // Resetta l'opacità del simbolo AriaVLC
+    // Crea la vista con il simbolo di AriaVLC e l'aggiunge come sottovista della linea tratteggiata.
+    //
+    // Usiamo la subclass RM_AriaSymbolView poiché una normale vista NSImageView interferirebbe
+    // con il Drag & Drop di questa vista avendo il drag and drop abilitato per default.
+    
+    NSImage *ariaImage = [NSImage imageNamed:@"ariaVlcSymbol"];
+    NSPoint symbolOrigin = [self getCenterWith:[ariaImage size] For:dottedLineBorder.bounds];
+    NSRect symbolFrame = NSMakeRect(symbolOrigin.x, symbolOrigin.y, ariaImage.size.width, ariaImage.size.height);
+    
+    ariaSymbol = [[RM_AriaSymbolView alloc] initWithFrame:symbolFrame];
+    [ariaSymbol setImage:ariaImage];
     [ariaSymbol setAlphaValue:OUT_ALPHA];
+    
+    [dottedLineBorder addSubview:ariaSymbol];
     
     // Imposta i margini in autoresize
     [dottedLineBorder setAutoresizingMask:NSViewMinXMargin | NSViewMaxXMargin | NSViewMaxYMargin | NSViewMinYMargin];
@@ -62,10 +75,10 @@
 }
 
 // Restituisce le coordinate di un'origine centrata con la vista padre.
-- (NSPoint)getOriginWith:(NSSize)frameSize For:(NSView *)parentView
+- (NSPoint)getCenterWith:(NSSize)frameSize For:(NSRect)parentViewBounds
 {
-    return NSMakePoint((NSWidth([parentView bounds]) - frameSize.width) / 2,
-                       (NSHeight([parentView bounds]) - frameSize.height) / 2);
+    return NSMakePoint((NSWidth(parentViewBounds) - frameSize.width) / 2,
+                       (NSHeight(parentViewBounds) - frameSize.height) / 2);
                        
 }
 
@@ -75,14 +88,19 @@
     NSSize expandendSize = NSMakeSize(dottedLineBorder.bounds.size.width + EXPANSION_SIZE,
                                       dottedLineBorder.bounds.size.width + EXPANSION_SIZE);
     
-    NSPoint centerOrigin = [self getOriginWith:expandendSize For:self.view];
+    NSPoint centerOrigin = [self getCenterWith:expandendSize For:self.view.bounds];
     NSRect expandedFrame = NSMakeRect(centerOrigin.x, centerOrigin.y, expandendSize.width, expandendSize.height);
     
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:ANIMATION_DURATION];
     
+    // Espandiamo il frame della linea tratteggiata
     [[dottedLineBorder animator] setFrame:expandedFrame];
     [dottedLineBorder setNeedsDisplay:YES];
+    
+    // Ricentriamo il simbolo
+    NSPoint symbolOrigin = [self getCenterWith:ariaSymbol.frame.size For:expandedFrame];
+    [[ariaSymbol animator] setFrameOrigin:symbolOrigin];
     
     [[ariaSymbol animator] setAlphaValue:IN_ALPHA];
     [ariaSymbol setNeedsDisplay:YES];
@@ -95,14 +113,19 @@
 {
     NSSize restoredSize = NSMakeSize(dottedLineBorder.bounds.size.width - EXPANSION_SIZE,
                                      dottedLineBorder.bounds.size.width - EXPANSION_SIZE);
-    NSPoint centerOrigin = [self getOriginWith:restoredSize For:self.view];
+    NSPoint centerOrigin = [self getCenterWith:restoredSize For:self.view.bounds];
     NSRect restoredFrame = NSMakeRect(centerOrigin.x, centerOrigin.y, restoredSize.width, restoredSize.height);
     
     [NSAnimationContext beginGrouping];
     [[NSAnimationContext currentContext] setDuration:ANIMATION_DURATION];
     
+    // Contraiamo il frame della linea tratteggiata.
     [[dottedLineBorder animator] setFrame:restoredFrame];
     [dottedLineBorder setNeedsDisplay:YES];
+    
+    // Ricentriamo il simbolo
+    NSPoint symbolOrigin = [self getCenterWith:ariaSymbol.frame.size For:restoredFrame];
+    [[ariaSymbol animator] setFrameOrigin:symbolOrigin];
     
     [[ariaSymbol animator] setAlphaValue:OUT_ALPHA];
     [ariaSymbol setNeedsDisplay:YES];
