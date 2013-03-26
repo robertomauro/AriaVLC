@@ -4,6 +4,7 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+    #import "ApplicationConstants.h"
 #endif
 
 static const int LOG_LEVEL_ERROR =      1;

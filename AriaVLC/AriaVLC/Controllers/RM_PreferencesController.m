@@ -50,11 +50,9 @@
 
 - (IBAction)restoreDefaults:(id)sender
 {
-    NSString *defaultAudioDelay = [[NSUserDefaults standardUserDefaults] valueForKey:@"DefaultAudioDelay"];
-    bool defaultFullscreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"DefaultFullScreen"];
     
-    [[NSUserDefaults standardUserDefaults] setValue:defaultAudioDelay forKey:@"CurrentAudioDelay"];
-    [[NSUserDefaults standardUserDefaults] setBool:defaultFullscreen forKey:@"CurrentFullScreen"];
+    [[NSUserDefaults standardUserDefaults] setValue:RMDefaultAudioDelay forKey:@"CurrentAudioDelay"];
+    [[NSUserDefaults standardUserDefaults] setBool:RMDefaultFullScreenMode forKey:@"CurrentFullScreen"];
     
     [self loadPrefs];
 }

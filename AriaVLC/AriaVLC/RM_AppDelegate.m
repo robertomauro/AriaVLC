@@ -29,8 +29,6 @@
 #import "RM_MainWindow.h"
 #import "RM_PreferencesController.h"
 
-#define DEFAULT_AUDIO_DELAY    @"1900"
-#define DEFAULT_FULLSCREEN     YES
 
 @implementation RM_AppDelegate
 
@@ -67,12 +65,8 @@
     if(![[NSUserDefaults standardUserDefaults] valueForKey:@"FirstLaunch"])
     {
         [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"FirstLaunch"];
-        
-        [[NSUserDefaults standardUserDefaults] setValue:DEFAULT_AUDIO_DELAY forKey:@"DefaultAudioDelay"];
-        [[NSUserDefaults standardUserDefaults] setBool:DEFAULT_FULLSCREEN forKey:@"DefaultFullScreen"];
-        
-        [[NSUserDefaults standardUserDefaults] setValue:DEFAULT_AUDIO_DELAY forKey:@"CurrentAudioDelay"];
-        [[NSUserDefaults standardUserDefaults] setBool:DEFAULT_FULLSCREEN forKey:@"CurrentFullScreen"];
+        [[NSUserDefaults standardUserDefaults] setValue:RMDefaultAudioDelay forKey:@"CurrentAudioDelay"];
+        [[NSUserDefaults standardUserDefaults] setBool:RMDefaultFullScreenMode forKey:@"CurrentFullScreen"];
     }
 }
 
@@ -83,7 +77,7 @@
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self
                       selector:@selector(applicationDidLaunch:)
-                          name:@"VLC_HAS_BEEN_STARTED"
+                          name:RMVlcHasBeenStartedNotification
                         object:nil];
     
 }

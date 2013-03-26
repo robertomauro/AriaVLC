@@ -80,7 +80,7 @@
     if ([[pboard types] containsObject:NSPasteboardTypeString])
     {
         DDLogInfo(@"Inizio trascinamento di una stringa");
-        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"DRAGBOX_ENTERED" object:self]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:RMDashedBoxDragOperationStartedNotification object:self];
         return NSDragOperationGeneric;
     }
     else if ([[pboard types] containsObject:NSURLPboardType])
@@ -89,7 +89,7 @@
         if([self isValidFile:fileURL])
         {
             DDLogInfo(@"Inizio trascinamento di un filmato o un audio");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"DRAGBOX_ENTERED" object:self]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:RMDashedBoxDragOperationStartedNotification object:self];
             return NSDragOperationGeneric;
         }
     }
@@ -104,7 +104,7 @@
     if ([[pboard types] containsObject:NSPasteboardTypeString])
     {
         DDLogInfo(@"Terminato il trascinamento di una stringa");
-        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"DRAGBOX_EXITED" object:self]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:RMDashedBoxDragOperationEndedNotification object:self];
     }
     else if ([[pboard types] containsObject:NSURLPboardType])
     {
@@ -112,7 +112,7 @@
         if([self isValidFile:fileURL])
         {
             DDLogInfo(@"Terminato il trascinamento di una filmato o un audio");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"DRAGBOX_EXITED" object:self]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:RMDashedBoxDragOperationEndedNotification object:self];
         }
     }
 }
@@ -120,7 +120,7 @@
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender
 {
     // Informa la vista che un elemento è stato droppato per concludere l'animazione.
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"DRAGBOX_DROPPED" object:self]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:RMDashedBoxDragOperationDroppedNotification object:self];
     
     // recupera la Pasteboard con gli elementi trascinati
     NSPasteboard *pboard = [sender draggingPasteboard];

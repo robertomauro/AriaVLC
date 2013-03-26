@@ -1,8 +1,8 @@
 //
-//  RM_ApplicationController.h
+//  RM_NotificationNames.h
 //  AriaVLC
 //
-//  Created by Roberto Mauro on 25/03/13.
+//  Created by Roberto Mauro on 26/03/13.
 //  Copyright (c) 2013 Roberto Mauro. All rights reserved.
 //
 //  This file is part of AriaVLC
@@ -19,10 +19,22 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with AriaVLC.  If not, see <http://www.gnu.org/licenses/>.
+//
 
-#import <Foundation/Foundation.h>
-#import "RM_VlcActions.h"
 
-@interface RM_ApplicationController : NSObject <RM_VlcActions>
 
-@end
+// Application Constant
+extern NSString * const RMDefaultAudioDelay;
+extern BOOL const RMDefaultFullScreenMode;
+
+// View Animation Constant
+extern float const RMDragAnimationOutAlpha;
+extern float const RMDragAnimationInAlpha;
+extern float const RMDragAnimationDuration;
+extern float const RMDragAnimationDashedBoxGrowth;
+
+// Notification Names
+extern NSString * const RMVlcHasBeenStartedNotification;
+extern NSString * const RMDashedBoxDragOperationStartedNotification;
+extern NSString * const RMDashedBoxDragOperationEndedNotification;
+extern NSString * const RMDashedBoxDragOperationDroppedNotification;

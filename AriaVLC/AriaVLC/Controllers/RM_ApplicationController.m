@@ -71,7 +71,7 @@
         [task launch];
     }];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VLC_HAS_BEEN_STARTED" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:RMVlcHasBeenStartedNotification object:self];
 }
 
 

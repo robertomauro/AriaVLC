@@ -17,6 +17,7 @@
 		C31C4E591700880D00E0A4FE /* dashedBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = C31C4E581700880D00E0A4FE /* dashedBorder.png */; };
 		C31C4E731700ADD700E0A4FE /* RM_MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C31C4E711700ADD700E0A4FE /* RM_MainWindow.m */; };
 		C31C4E741700ADD700E0A4FE /* RM_MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31C4E721700ADD700E0A4FE /* RM_MainWindow.xib */; };
+		C322DAEF170254F80023BF3D /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C322DAEE170254F80023BF3D /* ApplicationConstants.m */; };
 		C329BD2B1700D54700A23AF2 /* RM_AudioDelayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C329BD2A1700D54700A23AF2 /* RM_AudioDelayTextField.m */; };
 		C36140BB16FE1A9E00CD7DD2 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C36140AC16FE1A9E00CD7DD2 /* DDAbstractDatabaseLogger.m */; };
 		C36140BC16FE1A9E00CD7DD2 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C36140AE16FE1A9E00CD7DD2 /* DDASLLogger.m */; };
@@ -58,6 +59,8 @@
 		C31C4E701700ADD700E0A4FE /* RM_MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RM_MainWindow.h; path = Controllers/RM_MainWindow.h; sourceTree = "<group>"; };
 		C31C4E711700ADD700E0A4FE /* RM_MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_MainWindow.m; path = Controllers/RM_MainWindow.m; sourceTree = "<group>"; };
 		C31C4E721700ADD700E0A4FE /* RM_MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RM_MainWindow.xib; path = Controllers/RM_MainWindow.xib; sourceTree = "<group>"; };
+		C322DAED170254F80023BF3D /* ApplicationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationConstants.h; sourceTree = "<group>"; };
+		C322DAEE170254F80023BF3D /* ApplicationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationConstants.m; sourceTree = "<group>"; };
 		C329BD291700D54700A23AF2 /* RM_AudioDelayTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RM_AudioDelayTextField.h; sourceTree = "<group>"; };
 		C329BD2A1700D54700A23AF2 /* RM_AudioDelayTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RM_AudioDelayTextField.m; sourceTree = "<group>"; };
 		C36140AB16FE1A9E00CD7DD2 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 		C30AEDEA16FDE6680026AA86 = {
 			isa = PBXGroup;
 			children = (
+				C322DAED170254F80023BF3D /* ApplicationConstants.h */,
+				C322DAEE170254F80023BF3D /* ApplicationConstants.m */,
 				C398243F1701DA7200AFF57D /* License.txt */,
 				C30AEDFC16FDE6680026AA86 /* AriaVLC */,
 				C36140AA16FE1A9E00CD7DD2 /* Lumberjack */,
@@ -372,6 +377,7 @@
 				C36D40A31700B9FF00AFA205 /* RM_PreferencesController.m in Sources */,
 				C329BD2B1700D54700A23AF2 /* RM_AudioDelayTextField.m in Sources */,
 				C398243E1701B52C00AFF57D /* RM_AriaSymbolView.m in Sources */,
+				C322DAEF170254F80023BF3D /* ApplicationConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
