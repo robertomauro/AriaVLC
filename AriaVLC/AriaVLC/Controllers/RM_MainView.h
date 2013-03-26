@@ -14,4 +14,7 @@
 @property (assign) IBOutlet NSImageView *dottedLineBorder;
 @property (assign) IBOutlet NSImageView *ariaSymbol;
 
+
+
+
 @end

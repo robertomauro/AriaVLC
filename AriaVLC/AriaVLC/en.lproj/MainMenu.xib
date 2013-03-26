@@ -233,7 +233,6 @@
 							</set>
 							<string key="NSFrameSize">{300, 270}</string>
 							<reference key="NSSuperview" ref="421512648"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="636288835"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -258,8 +257,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{59, 20}, {183, 17}}</string>
 							<reference key="NSSuperview" ref="421512648"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="553107346">
@@ -297,11 +294,10 @@
 					</array>
 					<string key="NSFrameSize">{300, 270}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="696013055"/>
 					<string key="NSReuseIdentifierKey">_NS:20</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1920, 1200}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1366, 768}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -734,37 +730,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">715</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">NSLayoutConstraint</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">RM_AppDelegate</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">showPreferences:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">showPreferences:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">showPreferences:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/RM_AppDelegate.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

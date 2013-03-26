@@ -47,6 +47,7 @@
 
 }
 
+// Imposta le preferenze dell'applicazione al primo avvio
 -(void)setPrefsAtFistLaunch
 {
     if(![[NSUserDefaults standardUserDefaults] valueForKey:@"FirstLaunch"])
@@ -65,45 +66,21 @@
 
 -(void)registerNotifications
 {
-    // Aggiunge un observer per ricevere le notifiche di nuove applicazioni aperte.
-    // All'apertura di un'applicazione viene richiamato il metodo applicationDidLaunch:
-    NSNotificationCenter *defaultCenter = [[NSWorkspace sharedWorkspace] notificationCenter];
-    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self
                       selector:@selector(applicationDidLaunch:)
-                          name:NSWorkspaceDidLaunchApplicationNotification
+                          name:@"VLC_HAS_BEEN_STARTED"
                         object:nil];
     
-    [defaultCenter addObserver:self
-                      selector:@selector(applicationDidTerminate:)
-                          name:NSWorkspaceDidTerminateApplicationNotification object:nil];
 }
 
-// Questo metodo viene richiamato da Notification Center quando un'applicazione viene aperta.
+// Questo metodo viene richiamato da Notification Center quando VLC viene aperto.
 - (void) applicationDidLaunch: (NSNotification *)notification
 {
-    // Se l'applicazione lanciata è VLC nascondiamo la finestra di principale di AriaVLC.
-    NSString *appName = notification.userInfo[@"NSApplicationName"];
-    if([appName isEqualToString:@"VLC"])
-    {
-        DDLogInfo(@"VLC è stato aperto. Nascondo la finestra principale di Aria VLC.");
-        [mainWindow.window orderOut:self];
-    }
-    
+    DDLogInfo(@"VLC è stato aperto. Nascondo la finestra principale di Aria VLC.");
+    [mainWindow.window orderOut:self];
 }
 
-// Questo metodo viene richiamato da Notification Center quando un'applicazione viene chiusa.
-- (void) applicationDidTerminate: (NSNotification *)notification
-{
-    // Se l'applicazione lanciata è VLC nascondiamo la finestra di principale di AriaVLC.
-    NSString *appName = notification.userInfo[@"NSApplicationName"];
-    if([appName isEqualToString:@"VLC"])
-    {
-        DDLogInfo(@"VLC è stato chiuso. Mostro la finestra principale di Aria VLC.");
-        [mainWindow.window orderFront:self];
-    }
-    
-}
 
 // Quando l'applicazione diventa attiva, mostra la finestra se non è visibile.
 - (void)applicationDidBecomeActive:(NSNotification *)notification
