@@ -14,7 +14,7 @@
 		C30AEE0A16FDE6680026AA86 /* RM_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C30AEE0916FDE6680026AA86 /* RM_AppDelegate.m */; };
 		C30AEE0D16FDE6680026AA86 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30AEE0B16FDE6680026AA86 /* MainMenu.xib */; };
 		C30AEE2216FDF38B0026AA86 /* RM_DragHereView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30AEE2116FDF38B0026AA86 /* RM_DragHereView.m */; };
-		C31C4E591700880D00E0A4FE /* dottedLineBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = C31C4E581700880D00E0A4FE /* dottedLineBorder.png */; };
+		C31C4E591700880D00E0A4FE /* dashedBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = C31C4E581700880D00E0A4FE /* dashedBorder.png */; };
 		C31C4E731700ADD700E0A4FE /* RM_MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C31C4E711700ADD700E0A4FE /* RM_MainWindow.m */; };
 		C31C4E741700ADD700E0A4FE /* RM_MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31C4E721700ADD700E0A4FE /* RM_MainWindow.xib */; };
 		C329BD2B1700D54700A23AF2 /* RM_AudioDelayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C329BD2A1700D54700A23AF2 /* RM_AudioDelayTextField.m */; };
@@ -33,6 +33,7 @@
 		C3741D751700628400C15E56 /* RM_MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3741D731700628400C15E56 /* RM_MainView.m */; };
 		C3741D7B17006AAE00C15E56 /* RM_MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3741D7A17006AAE00C15E56 /* RM_MainView.xib */; };
 		C398243E1701B52C00AFF57D /* RM_AriaSymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = C398243D1701B52C00AFF57D /* RM_AriaSymbolView.m */; };
+		C39824401701DA7200AFF57D /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = C398243F1701DA7200AFF57D /* License.txt */; };
 		C3CCD59D1701085500134B41 /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C3CCD59C1701085500134B41 /* About.png */; };
 		C3CCD5A817010F3100134B41 /* RM_PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CCD5A717010F3100134B41 /* RM_PreferencesController.xib */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,7 @@
 		C30AEE0C16FDE6680026AA86 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C30AEE2016FDF38B0026AA86 /* RM_DragHereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RM_DragHereView.h; path = Views/RM_DragHereView.h; sourceTree = "<group>"; };
 		C30AEE2116FDF38B0026AA86 /* RM_DragHereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_DragHereView.m; path = Views/RM_DragHereView.m; sourceTree = "<group>"; };
-		C31C4E581700880D00E0A4FE /* dottedLineBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dottedLineBorder.png; sourceTree = "<group>"; };
+		C31C4E581700880D00E0A4FE /* dashedBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashedBorder.png; sourceTree = "<group>"; };
 		C31C4E701700ADD700E0A4FE /* RM_MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RM_MainWindow.h; path = Controllers/RM_MainWindow.h; sourceTree = "<group>"; };
 		C31C4E711700ADD700E0A4FE /* RM_MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_MainWindow.m; path = Controllers/RM_MainWindow.m; sourceTree = "<group>"; };
 		C31C4E721700ADD700E0A4FE /* RM_MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RM_MainWindow.xib; path = Controllers/RM_MainWindow.xib; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		C3741D7C17006BAC00C15E56 /* RM_VlcActions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RM_VlcActions.h; path = Protocols/RM_VlcActions.h; sourceTree = "<group>"; };
 		C398243C1701B52C00AFF57D /* RM_AriaSymbolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RM_AriaSymbolView.h; path = Views/RM_AriaSymbolView.h; sourceTree = "<group>"; };
 		C398243D1701B52C00AFF57D /* RM_AriaSymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RM_AriaSymbolView.m; path = Views/RM_AriaSymbolView.m; sourceTree = "<group>"; };
+		C398243F1701DA7200AFF57D /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		C3CCD59C1701085500134B41 /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		C3CCD5A717010F3100134B41 /* RM_PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RM_PreferencesController.xib; path = Controllers/RM_PreferencesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		C30AEDEA16FDE6680026AA86 = {
 			isa = PBXGroup;
 			children = (
+				C398243F1701DA7200AFF57D /* License.txt */,
 				C30AEDFC16FDE6680026AA86 /* AriaVLC */,
 				C36140AA16FE1A9E00CD7DD2 /* Lumberjack */,
 				C30AEDF516FDE6680026AA86 /* Frameworks */,
@@ -184,7 +187,7 @@
 			children = (
 				C3CCD59C1701085500134B41 /* About.png */,
 				C36754E51700FAB7008C287F /* AriaVLC.iconset */,
-				C31C4E581700880D00E0A4FE /* dottedLineBorder.png */,
+				C31C4E581700880D00E0A4FE /* dashedBorder.png */,
 				C3741D6B17005C8F00C15E56 /* ariaVlcSymbol.png */,
 			);
 			name = Graphics;
@@ -337,11 +340,12 @@
 				C36140C216FE1A9E00CD7DD2 /* README.txt in Resources */,
 				C3741D6D17005C8F00C15E56 /* ariaVlcSymbol.png in Resources */,
 				C3741D7B17006AAE00C15E56 /* RM_MainView.xib in Resources */,
-				C31C4E591700880D00E0A4FE /* dottedLineBorder.png in Resources */,
+				C31C4E591700880D00E0A4FE /* dashedBorder.png in Resources */,
 				C31C4E741700ADD700E0A4FE /* RM_MainWindow.xib in Resources */,
 				C36754E61700FAB7008C287F /* AriaVLC.iconset in Resources */,
 				C3CCD59D1701085500134B41 /* About.png in Resources */,
 				C3CCD5A817010F3100134B41 /* RM_PreferencesController.xib in Resources */,
+				C39824401701DA7200AFF57D /* License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
