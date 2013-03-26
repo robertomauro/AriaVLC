@@ -1,7 +1,7 @@
 AriaVLC
 =======
 
-AriaVLC is a little utility that let you watch videos with VLC and play the audio through AirPlay. For FREE.
+AriaVLC is a little utility that let you watch videos with VLC and play the audio through AirPlay. In Sync. For FREE.
 
 ## How it works
 
